@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "your-seat",
-    "slug": "your-seat",
+    "name": "Your Seat",
+    "slug": "Your Seat",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "your-seat",
+    "scheme": "Your Seat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
