@@ -1,0 +1,420 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Avengers: Endgame",
+      "genre": "Action, Adventure, Drama",
+      "duration": "181 min",
+      "rating": "U",
+      "poster": "https://wallpapers.com/images/featured-full/avengers-endgame-mghdp4gaqzu4q4us.jpg",
+      "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      "showtimes": [
+        {
+          "id": 1,
+          "time": "10:00 AM",
+          "date": "2024-01-15",
+          "price": 150,
+          "seats": {
+            "total": 100,
+            "booked": [
+              15,
+              16,
+              17,
+              25,
+              26,
+              35,
+              36,
+              45,
+              46,
+              55,
+              56,
+              65,
+              66,
+              75,
+              76,
+              85,
+              86,
+              95,
+              96
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 2,
+          "time": "2:30 PM",
+          "date": "2024-01-15",
+          "price": 140,
+          "seats": {
+            "total": 100,
+            "booked": [
+              12,
+              13,
+              22,
+              23,
+              32,
+              33,
+              42,
+              43,
+              52,
+              53,
+              62,
+              63,
+              72,
+              73,
+              82,
+              83,
+              92,
+              93
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 3,
+          "time": "7:00 PM",
+          "date": "2024-01-15",
+          "price": 160,
+          "seats": {
+            "total": 100,
+            "booked": [
+              11,
+              12,
+              21,
+              22,
+              31,
+              32,
+              41,
+              42,
+              51,
+              52,
+              61,
+              62,
+              71,
+              72,
+              81,
+              82,
+              91,
+              92
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 4,
+          "time": "9:00 PM",
+          "date": "2024-01-15",
+          "price": 180,
+          "seats": {
+            "total": 100,
+            "booked": [
+              11,
+              12,
+              21,
+              22,
+              31,
+              32,
+              41,
+              42,
+              51,
+              52,
+              61,
+              62,
+              71,
+              72,
+              81,
+              82,
+              91,
+              92
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight",
+      "genre": "Action, Crime, Drama",
+      "duration": "152 min",
+      "rating": "UA",
+      "poster": "https://wallpapers.com/images/hd/the-dark-knight-film-poster-usn88qj3uj5ci7rv.webp",
+      "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "showtimes": [
+        {
+          "id": 4,
+          "time": "11:00 AM",
+          "date": "2024-01-15",
+          "price": 200,
+          "seats": {
+            "total": 100,
+            "booked": [
+              14,
+              15,
+              24,
+              25,
+              34,
+              35,
+              44,
+              45,
+              54,
+              55,
+              64,
+              65,
+              74,
+              75,
+              84,
+              85,
+              94,
+              95
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 5,
+          "time": "4:00 PM",
+          "date": "2024-01-15",
+          "price": 190,
+          "seats": {
+            "total": 100,
+            "booked": [
+              13,
+              14,
+              23,
+              24,
+              33,
+              34,
+              43,
+              44,
+              53,
+              54,
+              63,
+              64,
+              73,
+              74,
+              83,
+              84,
+              93,
+              94
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Inception",
+      "genre": "Action, Adventure, Sci-Fi",
+      "duration": "148 min",
+      "rating": "A",
+      "poster": "https://wallpapers.com/images/high/inception-movie-gravity-defying-scene-p7hdgktailqeaba3.webp",
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "showtimes": [
+        {
+          "id": 6,
+          "time": "12:30 PM",
+          "date": "2024-01-15",
+          "price": 120,
+          "seats": {
+            "total": 100,
+            "booked": [
+              16,
+              17,
+              26,
+              27,
+              36,
+              37,
+              46,
+              47,
+              56,
+              57,
+              66,
+              67,
+              76,
+              77,
+              86,
+              87,
+              96,
+              97
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 7,
+          "time": "6:30 PM",
+          "date": "2024-01-15",
+          "price": 130,
+          "seats": {
+            "total": 100,
+            "booked": [
+              18,
+              19,
+              28,
+              29,
+              38,
+              39,
+              48,
+              49,
+              58,
+              59,
+              68,
+              69,
+              78,
+              79,
+              88,
+              89,
+              98,
+              99
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Interstellar",
+      "genre": "Adventure, Drama, Sci-Fi",
+      "duration": "170 min",
+      "rating": "S",
+      "poster": "https://wallpapers.com/images/hd/interstellar-astronaut-cooper-on-ice-blxlb2krxcwjb2du.webp",
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "showtimes": [
+        {
+          "id": 8,
+          "time": "1:00 PM",
+          "date": "2024-01-15",
+          "price": 180,
+          "seats": {
+            "total": 100,
+            "booked": [
+              19,
+              20,
+              29,
+              30,
+              39,
+              40,
+              49,
+              50,
+              59,
+              60,
+              69,
+              70,
+              79,
+              80,
+              89,
+              90,
+              99,
+              100
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        },
+        {
+          "id": 9,
+          "time": "8:00 PM",
+          "date": "2024-01-15",
+          "price": 170,
+          "seats": {
+            "total": 100,
+            "booked": [
+              10,
+              11,
+              20,
+              21,
+              30,
+              31,
+              40,
+              41,
+              50,
+              51,
+              60,
+              61,
+              70,
+              71,
+              80,
+              81,
+              90,
+              91
+            ],
+            "layout": {
+              "rows": 10,
+              "columns": 10,
+              "aisles": [
+                5,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bookings": []
+}
