@@ -37,7 +37,3 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
-
-.vscode
-app.json
-eas.json
