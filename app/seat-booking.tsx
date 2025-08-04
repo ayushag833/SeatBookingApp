@@ -45,17 +45,14 @@ export default function SeatBookingScreen() {
       const moviesData = require("../data/movies.json");
       const movie = moviesData.movies.find((m: any) => m.id === movieId);
       const showtime = movie.showtimes.find((s: any) => s.id === showtimeId);
-
-      const { rows, columns, aisles } = showtime.seats.layout;
+      const { rows, columns } = showtime.seats.layout;
       const defaultBookedSeats = showtime.seats.booked;
-
       const seatsArray: Seat[] = [];
       for (let row = 1; row <= rows; row++) {
         for (let col = 1; col <= columns; col++) {
           const seatId = (row - 1) * columns + col;
           const isBookedByUser = isSeatBooked(movieId, showtimeId, seatId);
           const isBookedByDefault = defaultBookedSeats.includes(seatId);
-
           seatsArray.push({
             id: seatId,
             row,
@@ -73,16 +70,13 @@ export default function SeatBookingScreen() {
 
   const handleSeatPress = (seat: Seat) => {
     if (seat.isBooked) return;
-
     const updatedSeats = seats.map((s) => {
       if (s.id === seat.id) {
         return { ...s, isSelected: !s.isSelected };
       }
       return s;
     });
-
     const newSelectedSeats = updatedSeats.filter((s) => s.isSelected);
-
     setSeats(updatedSeats);
     setSelectedSeats(newSelectedSeats);
     setTotalPrice(newSelectedSeats.length * pricePerSeat);
@@ -96,8 +90,6 @@ export default function SeatBookingScreen() {
       );
       return;
     }
-
-    // Create booking object
     const booking = {
       movieId,
       showtimeId,
@@ -107,11 +99,7 @@ export default function SeatBookingScreen() {
       totalPrice,
       bookingId: Date.now().toString(),
     };
-
-    // Add booking to context (this will also update booked seats)
     addBooking(booking);
-
-    // Navigate to confirmation
     router.push({
       pathname: "/booking-confirmation",
       params: booking,
@@ -121,7 +109,6 @@ export default function SeatBookingScreen() {
   const renderSeat = (seat: Seat) => {
     let seatStyle: any = styles.seat;
     let seatTextStyle: any = styles.seatText;
-
     if (seat.isBooked) {
       seatStyle = [styles.seat, styles.bookedSeat];
       seatTextStyle = [styles.seatText, styles.bookedSeatText];
@@ -129,7 +116,6 @@ export default function SeatBookingScreen() {
       seatStyle = [styles.seat, styles.selectedSeat];
       seatTextStyle = [styles.seatText, styles.selectedSeatText];
     }
-
     return (
       <TouchableOpacity
         key={seat.id}

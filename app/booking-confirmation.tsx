@@ -166,7 +166,6 @@ export default function BookingConfirmationScreen() {
                       "Booking Cancelled",
                       "Your booking has been cancelled successfully."
                     );
-                    router.push("/welcome");
                   },
                 },
               ]

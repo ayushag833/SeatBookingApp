@@ -29,7 +29,6 @@ export default function MoviesScreen() {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
-    // Load movies data
     const loadMovies = async () => {
       try {
         const moviesData = require("../data/movies.json");

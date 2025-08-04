@@ -2,7 +2,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import React from "react";
 import {
-  Dimensions,
   StatusBar,
   StyleSheet,
   Text,
@@ -10,8 +9,6 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
-const { width, height } = Dimensions.get("window");
 
 export default function WelcomeScreen() {
   return (

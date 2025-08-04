@@ -17,7 +17,6 @@ interface BookingContextType {
   addBooking: (booking: Booking) => void;
   cancelBooking: (bookingId: string) => void;
   isSeatBooked: (movieId: number, showtimeId: number, seatId: number) => boolean;
-  getBookedSeatsForShowtime: (movieId: number, showtimeId: number) => number[];
 }
 
 const BookingContext = createContext<BookingContextType | undefined>(undefined);
@@ -34,7 +33,6 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [bookedSeats, setBookedSeats] = useState<{ [key: string]: number[] }>({});
 
-  // Load data from AsyncStorage on app start
   useEffect(() => {
     loadDataFromStorage();
   }, []);
@@ -43,14 +41,8 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     try {
       const storedBookings = await AsyncStorage.getItem('bookings');
       const storedBookedSeats = await AsyncStorage.getItem('bookedSeats');
-      
-      if (storedBookings) {
-        setBookings(JSON.parse(storedBookings));
-      }
-      
-      if (storedBookedSeats) {
-        setBookedSeats(JSON.parse(storedBookedSeats));
-      }
+      if (storedBookings) setBookings(JSON.parse(storedBookings))
+      if (storedBookedSeats) setBookedSeats(JSON.parse(storedBookedSeats))
     } catch (error) {
       console.error('Error loading data from storage:', error);
     }
@@ -68,8 +60,6 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const addBooking = (booking: Booking) => {
     const newBookings = [...bookings, booking];
     setBookings(newBookings);
-
-    // Add seats to booked seats
     const key = `${booking.movieId}-${booking.showtimeId}`;
     const currentBookedSeats = bookedSeats[key] || [];
     const newBookedSeats = {
@@ -77,33 +67,24 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
       [key]: [...currentBookedSeats, ...booking.selectedSeats]
     };
     setBookedSeats(newBookedSeats);
-
-    // Save to storage
     saveDataToStorage(newBookings, newBookedSeats);
   };
 
   const cancelBooking = (bookingId: string) => {
     const bookingToCancel = bookings.find(b => b.bookingId === bookingId);
     if (!bookingToCancel) return;
-
-    // Remove booking from bookings array
     const newBookings = bookings.filter(b => b.bookingId !== bookingId);
     setBookings(newBookings);
-
-    // Remove seats from booked seats
     const key = `${bookingToCancel.movieId}-${bookingToCancel.showtimeId}`;
     const currentBookedSeats = bookedSeats[key] || [];
     const newBookedSeatsForShowtime = currentBookedSeats.filter(
       seatId => !bookingToCancel.selectedSeats.includes(seatId)
     );
-
     const newBookedSeats = {
       ...bookedSeats,
       [key]: newBookedSeatsForShowtime
     };
     setBookedSeats(newBookedSeats);
-
-    // Save to storage
     saveDataToStorage(newBookings, newBookedSeats);
   };
 
@@ -113,18 +94,12 @@ export const BookingProvider: React.FC<{ children: React.ReactNode }> = ({ child
     return showtimeBookedSeats.includes(seatId);
   };
 
-  const getBookedSeatsForShowtime = (movieId: number, showtimeId: number): number[] => {
-    const key = `${movieId}-${showtimeId}`;
-    return bookedSeats[key] || [];
-  };
-
   const value: BookingContextType = {
     bookings,
     bookedSeats,
     addBooking,
     cancelBooking,
     isSeatBooked,
-    getBookedSeatsForShowtime,
   };
 
   return (
